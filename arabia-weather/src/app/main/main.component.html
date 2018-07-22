@@ -1,0 +1,18 @@
+<div class = "container">
+  <!-- <div class="row">
+    <div class="col-xs-12">
+     <ul *ngFor="let image of Imagearray">
+       <li>
+         <img src ="{{image.images.downsized_large.url}}" >
+         <p>{{image.username}}</p>
+       </li>
+     </ul>
+    </div>
+  </div> -->
+  <div class="row">
+    <div class="col-3" *ngFor="let image of Imagearray" style="overflow: hidden;">
+      <img src ="{{image.images.downsized_large.url}}" >
+      <p>{{image.username}}</p>
+    </div>
+  </div>
+</div> 
