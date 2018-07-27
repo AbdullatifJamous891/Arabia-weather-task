@@ -13,13 +13,15 @@ export class MainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+     // execute getImages function when page load
      this.getImages()
-  }
+  };
   getImages(){
-    axios.get(this.url).then((Images)=>{
+    axios.get(this.url).then((res)=>{
+      //insert data inside array Imagearray
+      console.log("dddddd",res.data.data);
       
-      this.Imagearray = Images.data['data']
-      console.log("alo alo", this.Imagearray)
+      this.Imagearray = res.data['data']
     }).catch((error)=>{
       console.log(error)
     })
